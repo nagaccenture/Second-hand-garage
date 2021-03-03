@@ -1,0 +1,54 @@
+<h1 align="center" class="display-4 mb-5">{{title}}</h1>
+<div class="row text-center justify-content-center">
+  <div class="col-lg-6 ">
+    <div class="card mb-4 ">
+      <img height="60%" class="card-img-top" src="{{carInfo?.carImage}}">
+      <div class="card-body">
+        <h4 class="card-title ">{{carInfo?.carName}}</h4>
+        <form name="form" #form='ngForm' (ngSubmit)="addToCart()">
+          <div class="text-left">
+            <input hidden name="carId" [value]=carInfo?.carId>
+            <p class="card-test"><strong>Description: </strong>{{carInfo?.carName}}</p>
+            <p class="card-test"><strong>milesperGallon: </strong>{{carInfo?.milesperGallon}}</p>
+            <p class="card-test"><strong>acceleration: </strong>{{carInfo?.acceleration}}</p>
+            <p class="card-test"><strong>addedDate: </strong>{{carInfo?.addedDate}}</p>
+            <p class="card-test"><strong>productPrice: </strong>{{carInfo?.carPrice}}</p>
+            <p class="card-test"><strong>cylinders: </strong>{{carInfo?.cylinders}}</p>
+            <p class="card-test"><strong>warehouse: </strong>{{carInfo?.warehouse}}</p>
+
+            <p class="card-test"><strong>Description: </strong>{{carInfo?.displacement}}</p>
+
+
+            <p class="card-text">
+              <strong>Price: </strong>
+              <label id="price">{{carInfo?.carPrice | currency}}</label>
+            </p>
+         <!--   <p class="card-text"><strong>Stock: </strong>{{productInfo?.productStock}}</p>-->
+
+            <label class="card-text">
+              <strong>Quantity: </strong>
+              <input [(ngModel)]=count
+                     type="number"
+                     name="count"
+                     required
+                     min="1"
+
+              >
+            </label>
+
+
+            <p class="card-text"><strong>Subtotal: </strong>
+              <label id="subtotal">{{count * carInfo?.carPrice | currency}}</label>
+            </p>
+          </div>
+          <button type="submit" [disabled]="!form.form.valid" *ngIf="carInfo?.licensed == true; else offBlock"
+                  class="btn btn-primary btn-lg"
+          >Add to Cart
+          </button>
+          <ng-template #offBlock><a class="btn btn-secondary btn-lg disabled">Unavailable</a></ng-template>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

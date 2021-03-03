@@ -1,0 +1,25 @@
+<h1 align="center" class="display-4 mb-5">Order Detail</h1>
+<table class="table table-striped text-center">
+    <thead>
+    <tr>
+        <th scope="col">Photo</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Subtotal</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of (order$ | async)?.carInOrders">
+        <th class="align-middle" scope="row">
+            <img height="100px" src="{{item.carImage}}" alt="{{item.carName}}">
+        </th>
+        <td class="align-middle">{{item.carName}}</td>
+        <td class="align-middle">{{item.carPrice | currency}}</td>
+        <td class="align-middle">{{item.count}}</td>
+        <td class="align-middle">{{(item.carPrice * item.count | currency)}}</td>
+    </tr>
+    </tbody>
+</table>
+<h5 style="display: inline" class="float-right">Total: {{(order$ | async)?.orderAmount | currency}}</h5>
