@@ -1,0 +1,6 @@
+INSERT INTO "public"."car_info" VALUES ('123', 12.5, '2018-01-10 00:15:27','http://1j5jsm2mvi7w2f7x4m23n116.wpengine.netdna-cdn.com/wp-content/uploads/2013/07/1966_chevelle_malibu.jpg','chevrolet chevelle malibu',8499,6,225,100,true,19,'USA');
+INSERT INTO "public"."car_info" VALUES ('124', 18.6, '2018-02-10 00:15:27','https://upload.wikimedia.org/wikipedia/commons/1/1d/Ford_Granada_Mk1_1975_2%2C3_GL.jpg','ford granada',4999,8,340,150,false,23,'USA');
+INSERT INTO "public"."car_info" VALUES ('125', 30.7, '2018-03-10 00:15:27','https://kids.kiddle.co/images/5/5e/1962_Pontiac_Grand_Prix_in_red.jpg','pontiac grand prix lj',5999,10,423,10,true,25,'USA');
+INSERT INTO "public"."car_info" VALUES ('126', 35.9, '2018-04-10 00:15:27','http://www.ewallpapers.eu/sites/default/files/chevrolet-monte-carlo-61510-984015.jpg','chevrolet monte carlo landau',3999,4,467,24,false,27,'USA');
+INSERT INTO "public"."car_info" VALUES ('127', 56.9, '2018-05-10 00:15:27','https://d31029zd06w0t6.cloudfront.net/wp-content/uploads/sites/54/2018/07/web1_real-wheels_1966PlymouthSatellite.jpg','plymouth satellite',6999,12,432,26,true,34,'USA');
+INSERT INTO "public"."car_info" VALUES ('128', 47.23, '2018-06-10 00:15:27','https://www.hdcarwallpapers.com/walls/1970_ford_torino_king_cobra_4k-HD.jpg','ford torino',3449,15,456,32,true,23,'USA');
